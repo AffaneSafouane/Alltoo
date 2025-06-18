@@ -30,6 +30,7 @@
       <list>
         <option value="$MODULE_DIR$/facturo/listings/templates" />
         <option value="$MODULE_DIR$/facturo/templates" />
+        <option value="$MODULE_DIR$/facturo/core/templates" />
       </list>
     </option>
   </component>

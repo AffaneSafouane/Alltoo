@@ -1,4 +1,4 @@
-{% extends 'listings/base.html' %}
+{% extends 'shared/base.html' %}
 {% block title %}Nouveau produit{% endblock %}
 {% block content %}
     {% if form.non_field_errors %}
@@ -13,7 +13,7 @@
 
     <div class="w-50 mx-auto bg-dark-subtle rounded-lg p-4 border m-3">
         <h1 class="mb-3 text-center">Créer un produit</h1>
-        <form action="" method="POST" novalidate>
+        <form action="" method="POST">
             {% csrf_token %}
 
             {% for field in form %}

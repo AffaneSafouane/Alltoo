@@ -1,19 +1,10 @@
-from urllib import request
-
 from django.contrib import messages
-from django.contrib.admin.templatetags.admin_list import paginator_number
 from django.core.paginator import Paginator
-from django.http import HttpResponse
-from .models import Product
-from invoices.models import Invoice
 from django.shortcuts import render, redirect, get_object_or_404
+
 from .forms import ProductForm
-def home(request):
-    products = Product.objects.all().order_by('-id')[:2]
-    invoices = Invoice.objects.all().order_by('creation_date')[:2]
-    return render(request,
-                  'listings/home.html',
-                  {'products': products, 'invoices': invoices})
+from .models import Product
+
 
 def product_list(request):
     products_list = Product.objects.all().order_by('-id')
