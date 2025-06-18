@@ -14,7 +14,13 @@ class ProductForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'price': forms.NumberInput(attrs={'class': 'form-control'}),
-            'expiration_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+            'expiration_date': forms.DateInput(
+                attrs={
+                    'type': 'date',
+                    'class': 'form-control'
+                },
+                format='%Y-%m-%d',
+            ),
         }
         error_messages = {
             'name': {'required': 'Le nom du produit est requis.'},
@@ -31,5 +37,5 @@ class ProductForm(forms.ModelForm):
     def clean_expiration_date(self):
         expiration_date = self.cleaned_data['expiration_date']
         if expiration_date < date.today():
-            raise forms.ValidationError("la date d'expiration doitêtre future.")
+            raise forms.ValidationError("La date d'expiration doit être future.")
         return expiration_date

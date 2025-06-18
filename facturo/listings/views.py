@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from .models import Product
 from invoices.models import Invoice
 from django.shortcuts import render, redirect, get_object_or_404
-from .froms import ProductForm
+from .forms import ProductForm
 def home(request):
     products = Product.objects.all().order_by('-id')[:2]
     invoices = Invoice.objects.all().order_by('creation_date')[:2]
@@ -16,7 +16,7 @@ def home(request):
                   {'products': products, 'invoices': invoices})
 
 def product_list(request):
-    products_list = Product.objects.all()
+    products_list = Product.objects.all().order_by('-id')
     paginator= Paginator(products_list, 10)
 
     page = request.GET.get('page')

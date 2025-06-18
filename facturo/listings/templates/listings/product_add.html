@@ -1,9 +1,9 @@
 {% extends 'listings/base.html' %}
 {% block title %}Nouveau produit{% endblock %}
 {% block content %}
-    {% if form.errors %}
+    {% if form.non_field_errors %}
         <div class="alert alert-danger">
-            <ul>
+            <ul class="mb-0">
                 {% for error in form.non_field_errors %}
                     <li>{{ error }}</li>
                 {% endfor %}
@@ -13,14 +13,14 @@
 
     <div class="w-50 mx-auto bg-dark-subtle rounded-lg p-4 border m-3">
         <h1 class="mb-3 text-center">Créer un produit</h1>
-        <form action="" method="POST">
+        <form action="" method="POST" novalidate>
             {% csrf_token %}
 
             {% for field in form %}
                 <div class="mb-3">
                     <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
                     {{ field }}
-                    {% if filed.errors %}
+                    {% if field.errors %}
                         <div class="text-danger small">
                             {{ field.errors|striptags }}
                         </div>
