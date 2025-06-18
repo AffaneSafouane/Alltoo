@@ -1,0 +1,54 @@
+{% extends 'listings/base.html' %}
+{% block title %}Liste de produits{% endblock %}
+{% block content %}
+    <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <h3 class="mb-3"><i class="bi bi-archive"></i> Liste de produits</h3>
+        <a href="{% url 'product-add' %}" class="btn btn-success mb-4"><i class="bi bi-plus-circle"></i> Ajouter un produit</a>
+        <div class="list-group">
+            {% for product in products %}
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ product.name }}</strong><br>
+                        <small>Péremption : {{ product.expiration_date|date:"SHORT_DATE_FORMAT" }}</small>
+                    </div>
+                    <span class="badge bg-secondary">{{ product.price }} €</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-4 mt-2">
+                    <a href="{% url 'product-update' product.id %}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Modifier le produit</a>
+                    <a href="{% url 'product-delete' product.id %}" class="btn btn-danger"><i class="bi bi-trash"></i> Supprimer le produit</a>
+                </div>
+            {% empty %}
+                <p class="text-muted">Aucun produit disponible.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if products.has_other_pages %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if products.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ products.previous_page_number }}">Previous</a></li>
+                {% endif %}
+
+                <li class="page-item disabled">
+                    <a class="page-link">Page {{ products.number }} of {{ products.paginator.num_pages }}</a>
+                </li>
+
+                {% if products.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ products.next_page_number }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ products.paginator.num_pages }}">&raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+{% endblock %}
