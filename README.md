@@ -35,8 +35,8 @@
       ```
    Sous Windows :
       ```bash
-      python -m venv venv
-      .\venv\Scripts\Activate.ps1
+      python -m venv env
+      .\env\Scripts\Activate.ps1
       ```
 3. **Installer les dépendances**
    ```bash
