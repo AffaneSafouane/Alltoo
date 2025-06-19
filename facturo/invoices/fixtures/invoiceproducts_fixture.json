@@ -1,0 +1,155 @@
+[
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "invoice": 1,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "invoice": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "invoice": 2,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 4,
+    "fields": {
+      "product": 4,
+      "invoice": 2,
+      "quantity": 4
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 5,
+    "fields": {
+      "product": 1,
+      "invoice": 3,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 6,
+    "fields": {
+      "product": 2,
+      "invoice": 3,
+      "quantity": 4
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 7,
+    "fields": {
+      "product": 3,
+      "invoice": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 8,
+    "fields": {
+      "product": 2,
+      "invoice": 4,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 9,
+    "fields": {
+      "product": 3,
+      "invoice": 4,
+      "quantity": 8
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 10,
+    "fields": {
+      "product": 5,
+      "invoice": 5,
+      "quantity": 5
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 11,
+    "fields": {
+      "product": 6,
+      "invoice": 5,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 12,
+    "fields": {
+      "product": 7,
+      "invoice": 6,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 13,
+    "fields": {
+      "product": 8,
+      "invoice": 6,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 14,
+    "fields": {
+      "product": 9,
+      "invoice": 7,
+      "quantity": 4
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 15,
+    "fields": {
+      "product": 10,
+      "invoice": 7,
+      "quantity": 6
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 16,
+    "fields": {
+      "product": 4,
+      "invoice": 8,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 17,
+    "fields": {
+      "product": 7,
+      "invoice": 8,
+      "quantity": 1
+    }
+  }
+]

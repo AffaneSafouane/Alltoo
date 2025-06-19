@@ -1,0 +1,92 @@
+[
+  {
+    "model": "listings.product",
+    "pk": 1,
+    "fields": {
+      "name": "Jus d'orange bio (1L)",
+      "price": "3.49",
+      "expiration_date": "2025-08-25"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 2,
+    "fields": {
+      "name": "Fromage de chèvre",
+      "price": "5.90",
+      "expiration_date": "2025-08-15"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 3,
+    "fields": {
+      "name": "Yaourt vanille",
+      "price": "2.10",
+      "expiration_date": "2025-07-05"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 4,
+    "fields": {
+      "name": "Lait demi écrémé",
+      "price": "1.05",
+      "expiration_date": "2025-07-02"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 5,
+    "fields": {
+      "name": "Pain complet",
+      "price": "1.20",
+      "expiration_date": "2025-07-10"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 6,
+    "fields": {
+      "name": "Beurre doux",
+      "price": "2.50",
+      "expiration_date": "2025-09-01"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 7,
+    "fields": {
+      "name": "Œufs frais (12 pièces)",
+      "price": "3.00",
+      "expiration_date": "2025-07-12"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 8,
+    "fields": {
+      "name": "Compote de pommes",
+      "price": "2.20",
+      "expiration_date": "2025-11-05"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 9,
+    "fields": {
+      "name": "Fromage râpé",
+      "price": "4.30",
+      "expiration_date": "2025-08-20"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 10,
+    "fields": {
+      "name": "Eau minérale (1L)",
+      "price": "0.80",
+      "expiration_date": "2026-01-01"
+    }
+  }
+]

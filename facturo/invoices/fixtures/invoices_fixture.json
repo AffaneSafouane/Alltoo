@@ -1,0 +1,58 @@
+[
+  {
+    "model": "invoices.invoice",
+    "pk": 1,
+    "fields": {
+      "creation_date": "2025-06-17T17:43:31.787Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 2,
+    "fields": {
+      "creation_date": "2025-06-17T17:47:56.291Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 3,
+    "fields": {
+      "creation_date": "2025-06-19T13:32:49.240Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 4,
+    "fields": {
+      "creation_date": "2025-06-19T13:42:05.885Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 5,
+    "fields": {
+      "creation_date": "2025-06-19T14:00:00.000Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 6,
+    "fields": {
+      "creation_date": "2025-06-18T10:15:30.000Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 7,
+    "fields": {
+      "creation_date": "2025-06-16T09:45:12.000Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 8,
+    "fields": {
+      "creation_date": "2025-06-15T08:22:00.000Z"
+    }
+  }
+]
