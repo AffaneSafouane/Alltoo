@@ -30,13 +30,13 @@
 2. **Créer et activer l’environnement virtuel**  
    Sous Linux/macOS :
       ```bash
-      python3 -m venv venv
-      source venv/bin/activate
+      python3 -m venv env
+      source env/bin/activate
       ```
    Sous Windows :
       ```bash
-      python -m venv venv
-      .\venv\Scripts\Activate.ps1
+      python -m venv env
+      .\env\Scripts\Activate.ps1
       ```
 3. **Installer les dépendances**
    ```bash
