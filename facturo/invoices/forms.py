@@ -4,6 +4,7 @@ from django import forms
 class ProductSelectionForm(forms.Form):
     def __init__(self, *args, **kwargs):
         products = kwargs.pop('products')
+        self.post_data = kwargs.pop('post_data', None)
         super().__init__(*args, **kwargs)
 
         if products:
@@ -29,14 +30,15 @@ class ProductSelectionForm(forms.Form):
     def clean(self):
         cleaned_data = super().clean()
 
-        has_quantity = False
-        for product in self.products:
-            qty = cleaned_data.get(f'product_{product.id}')
-            if qty and qty > 0:
-                has_quantity = True
-                break
+        if self.post_data and 'order' in self.post_data:
+            has_quantity = False
+            for product in self.products:
+                qty = cleaned_data.get(f'product_{product.id}')
+                if qty and qty > 0:
+                    has_quantity = True
+                    break
 
-        if not has_quantity:
-            raise forms.ValidationError('Veuillez sélectionner au moins un produit.')
+            if not has_quantity:
+                raise forms.ValidationError('Veuillez sélectionner au moins un produit.')
 
         return cleaned_data

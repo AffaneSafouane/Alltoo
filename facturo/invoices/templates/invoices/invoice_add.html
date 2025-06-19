@@ -37,6 +37,18 @@
                 </tbody>
             </table>
         </div>
-        <button type="submit" class="btn btn-primary mt-2">Commander</button>
+        <div class="pagination-controls">
+            <div class="d-flex justify-content-between mt-2">
+                {% if page_obj.has_previous %}
+                    <button name="prev" value="1" class="btn btn-secondary">Précédent</button>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <button name="next" value="1" class="btn btn-primary">Suivant</button>
+                {% else %}
+                    <button type="submit" class="btn btn-primary" name="order">Commander</button>
+                {% endif %}
+                <button type="submit" class="btn btn-outline-danger" name="cancel">Annuler ma commande</button>
+            </div>
+        </div>
     </form>
 {% endblock %}
