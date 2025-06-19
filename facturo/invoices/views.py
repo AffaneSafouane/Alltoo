@@ -8,7 +8,7 @@ from listings.models import Product
 
 def invoice_list(request):
     invoices_list = Invoice.objects.all().order_by('-creation_date')
-    paginator = Paginator(invoices_list, 10)
+    paginator = Paginator(invoices_list, 8)
 
     page = request.GET.get('page')
     invoices = paginator.get_page(page)
