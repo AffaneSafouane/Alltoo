@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from listings import views
 from core import views as core_views
+from invoices import views as invoice_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,9 @@ urlpatterns = [
     path('products/add/', views.product_add, name='product-add'),
     path('products/<int:id>/update/', views.product_update, name='product-update'),
     path('products/<int:id>/delete/', views.product_delete, name='product-delete'),
+
+    path('invoices/', invoice_views.invoice_list, name='invoice-list'),
+    path('invoices/<int:id>/detail', invoice_views.invoice_detail, name='invoice-detail'),
+    path('invoices/add/', invoice_views.invoice_add, name='invoice-add'),
+    path('invoices/confirm/', invoice_views.invoice_confirm, name='invoice-confirm'),
 ]

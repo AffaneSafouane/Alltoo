@@ -2,14 +2,14 @@
 {% block content %}
     <div class="d-flex justify-content-between mb-4">
         <a href="{% url 'product-add' %}" class="btn btn-success"><i class="bi bi-plus-circle"></i> Ajouter un produit</a>
-        <a href="#" class="btn btn-primary"><i class="bi bi-file-plus"></i> Créer un facture</a>
+        <a href="{% url 'invoice-add' %}" class="btn btn-primary"><i class="bi bi-cart2"></i> Créer une facture</a>
     </div>
 
     <div class="mb-5">
         <h3 class="mb-3"><i class="bi bi-archive"></i> Produits récents</h3>
         <div class="list-group">
             {% for product in products %}
-                <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="list-group-item d-flex justify-content-between align-items-center bg-dark-subtle">
                     <div>
                         <strong>{{ product.name }}</strong><br>
                         <small>Péremption : {{ product.expiration_date|date:"SHORT_DATE_FORMAT" }}</small>
@@ -21,7 +21,7 @@
             {% endfor %}
         </div>
         <div class="mt-2">
-            <a href="{% url 'product-list' %}" class="btn btn-outline-secondary btn-sm mt-2">Voir tous les produits</a>
+            <a href="{% url 'product-list' %}" class="btn btn-outline-primary btn-sm mt-2">Voir tous les produits</a>
         </div>
     </div>
 
@@ -29,16 +29,19 @@
         <h3 class="mb-3"><i class="bi bi-file-earmark"></i> Dernières factures</h3>
         <div class="list-group">
             {% for invoice in invoices %}
-                <div class="list-group-item">
-                    <strong>Facture #{{ invoice.id }}</strong><br>
-                    <small>{{ invoice.quantity }} produits – Total : {{ invoice.total }} € – {{ invoice.creation_date|date:"SHORT_DATE_FORMAT" }}</small>
+                <div class="list-group-item d-flex justify-content-between align-items-center bg-dark-subtle">
+                    <div>
+                        <strong>Facture #{{ invoice.id }}</strong><br>
+                        <small>{{ invoice.quantity }} produits – {{ invoice.creation_date|date:"d/m/Y - H:i" }}</small>
+                    </div>
+                    <span class="badge bg-secondary">{{ invoice.total }} €</span>
                 </div>
             {% empty %}
                 <p class="text-muted">Aucun facture disponible.</p>
             {% endfor %}
         </div>
         <div class="mt-2">
-            <a href="#" class="btn btn-outline-secondary btn-sm mt-2">Voir toutes les factures</a>
+            <a href="{% url 'invoice-list' %}" class="btn btn-outline-primary btn-sm mt-2">Voir toutes les factures</a>
         </div>
     </div>
 {% endblock %}

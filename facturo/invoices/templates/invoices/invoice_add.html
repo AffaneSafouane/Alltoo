@@ -1,0 +1,42 @@
+{% extends 'shared/base.html' %}
+{% block title %}Créer une facture{% endblock %}
+{% block content %}
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                {% for error in form.non_field_errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <h3 class="mb-4">Sélectionner vos produits</h3>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="table-responsive rounded-3 shadow-lg border border-secondary" style="overflow-x: auto;">
+            <table class="table table-dark table-hover table-striped align-middle mb-0">
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Expiration Date</th>
+                    <th>Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in form.product_rows %}
+                    <tr>
+                        <td>{{ row.product.name }}</td>
+                        <td>{{ row.product.price }} €</td>
+                        <td>{{ row.product.expiration_date }}</td>
+                        <td>{{ row.field }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Commander</button>
+    </form>
+{% endblock %}
