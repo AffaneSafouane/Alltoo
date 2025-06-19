@@ -15,7 +15,7 @@
     </style>
 {% endblock %}
 {% block content %}
-    <div>
+    <div class="mb-3">
         {% if messages %}
             {% for message in messages %}
                 <div class="alert alert-success">
@@ -48,15 +48,15 @@
             <ul class="pagination justify-content-center">
                 {% if invoices.has_previous %}
                     <li class="page-item"><a class="page-link" href="?page=1">&laquo;</a></li>
-                    <li class="page-item"><a class="page-link" href="?page={{ invoices.previous_page_number }}">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ invoices.previous_page_number }}">Précédent</a></li>
                 {% endif %}
 
                 <li class="page-item disabled">
-                    <a class="page-link">Page {{ invoices.number }} of {{ invoices.paginator.num_pages }}</a>
+                    <a class="page-link">Page {{ invoices.number }} sur {{ invoices.paginator.num_pages }}</a>
                 </li>
 
                 {% if invoices.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ invoices.next_page_number }}">Next</a>
+                    <li class="page-item"><a class="page-link" href="?page={{ invoices.next_page_number }}">Suivant</a>
                     </li>
                     <li class="page-item"><a class="page-link" href="?page={{ invoices.paginator.num_pages }}">&raquo;</a></li>
                 {% endif %}
