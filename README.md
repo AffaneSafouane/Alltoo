@@ -25,7 +25,7 @@
 1. **Cloner le dépôt** (ou télécharger les fichiers du projet)  
    ```bash
    git clone https://github.com/AffaneSafouane/Alltoo.git
-   cd facturo
+   cd Alltoo
    ```
 2. **Créer et activer l’environnement virtuel**  
    Sous Linux/macOS :
@@ -44,6 +44,7 @@
    ```
 4. **Appliquer les migrations (création de la base de données SQLite et tables)**
    ```bash
+   cd facturo
    python manage.py migrate
    ```
 5. **Charger les données dans la base**  
