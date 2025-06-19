@@ -54,5 +54,19 @@
     "fields": {
       "creation_date": "2025-06-15T08:22:00.000Z"
     }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 9,
+    "fields": {
+      "creation_date": "2025-06-20T10:30:00.000Z"
+    }
+  },
+  {
+    "model": "invoices.invoice",
+    "pk": 10,
+    "fields": {
+      "creation_date": "2025-06-21T15:45:00.000Z"
+    }
   }
 ]

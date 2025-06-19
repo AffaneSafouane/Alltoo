@@ -88,5 +88,50 @@
       "price": "0.80",
       "expiration_date": "2026-01-01"
     }
+  },
+  {
+    "model": "listings.product",
+    "pk": 11,
+    "fields": {
+      "name": "Miel naturel (250g)",
+      "price": "6.75",
+      "expiration_date": "2027-03-15"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 12,
+    "fields": {
+      "name": "Tomates cerises (500g)",
+      "price": "3.10",
+      "expiration_date": "2025-07-15"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 13,
+    "fields": {
+      "name": "Pâtes complètes (500g)",
+      "price": "1.80",
+      "expiration_date": "2026-04-01"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 14,
+    "fields": {
+      "name": "Huile d'olive extra vierge (750ml)",
+      "price": "8.90",
+      "expiration_date": "2027-12-31"
+    }
+  },
+  {
+    "model": "listings.product",
+    "pk": 15,
+    "fields": {
+      "name": "Chocolat noir 70% (100g)",
+      "price": "2.40",
+      "expiration_date": "2026-02-20"
+    }
   }
 ]

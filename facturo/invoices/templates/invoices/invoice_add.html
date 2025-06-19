@@ -39,6 +39,7 @@
         </div>
         <div class="pagination-controls">
             <div class="d-flex justify-content-between mt-2">
+                <button type="submit" class="btn btn-outline-danger" name="cancel">Annuler ma commande</button>
                 {% if page_obj.has_previous %}
                     <button name="prev" value="1" class="btn btn-secondary">Précédent</button>
                 {% endif %}
@@ -47,7 +48,6 @@
                 {% else %}
                     <button type="submit" class="btn btn-primary" name="order">Commander</button>
                 {% endif %}
-                <button type="submit" class="btn btn-outline-danger" name="cancel">Annuler ma commande</button>
             </div>
         </div>
     </form>

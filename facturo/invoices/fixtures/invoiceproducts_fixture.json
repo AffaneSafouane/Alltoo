@@ -151,5 +151,23 @@
       "invoice": 8,
       "quantity": 1
     }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 18,
+    "fields": {
+      "product": 11,
+      "invoice": 9,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "invoices.invoiceproduct",
+    "pk": 19,
+    "fields": {
+      "product": 14,
+      "invoice": 10,
+      "quantity": 1
+    }
   }
 ]
